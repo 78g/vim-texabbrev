@@ -1,0 +1,14 @@
+g:texabbrev_nocabbrev	texabbrev.txt	/*g:texabbrev_nocabbrev*
+g:texabbrev_nocomplete	texabbrev.txt	/*g:texabbrev_nocomplete*
+g:texabbrev_table	texabbrev.txt	/*g:texabbrev_table*
+g:texabbrev_tmap	texabbrev.txt	/*g:texabbrev_tmap*
+g:texabbrev_wordlist	texabbrev.txt	/*g:texabbrev_wordlist*
+texabbrev-:Tex2Unicode	texabbrev.txt	/*texabbrev-:Tex2Unicode*
+texabbrev-:TexAbbrev	texabbrev.txt	/*texabbrev-:TexAbbrev*
+texabbrev-:TexUnAbbrev	texabbrev.txt	/*texabbrev-:TexUnAbbrev*
+texabbrev-:Unicode2Tex	texabbrev.txt	/*texabbrev-:Unicode2Tex*
+texabbrev-commands	texabbrev.txt	/*texabbrev-commands*
+texabbrev-configuration	texabbrev.txt	/*texabbrev-configuration*
+texabbrev-table	texabbrev.txt	/*texabbrev-table*
+texabbrev-tex	texabbrev.txt	/*texabbrev-tex*
+texabbrev.txt	texabbrev.txt	/*texabbrev.txt*
