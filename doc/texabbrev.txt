@@ -52,7 +52,7 @@ ears.
 ==============================================================================
 DEFAULT SYMBOL TABLE                                           *texabbrev-table*
 
-The default value of g:texabbrev_table is 
+The default value of `g:texabbrev_table` is 
 >
     let g:texabbrev_table = [  
         \ ['alpha'          , 'α' ],
@@ -179,7 +179,6 @@ The default value of g:texabbrev_table is
         \ ['leftharpoondown', '↽' ],
         \ ['leftharpoonup'  , '↼' ],
         \ ['leftrightarrow' , '↔' ],
-        \ ['Leftrightarrow' , '⇔' ],
         \ ['leqq'           , '≦' ],
         \ ['lesssim'        , '≲' ],
         \ ['lfloor'         , '⌊' ],
@@ -202,7 +201,6 @@ The default value of g:texabbrev_table is
         \ ['ni'             , '∋' ],
         \ ['nleftarrow'     , '↚' ],
         \ ['nLeftarrow'     , '⇍' ],
-        \ ['nLeftrightarrow', '⇎' ],
         \ ['nleq'           , '≰' ],
         \ ['nleqq'          , '≰' ],
         \ ['nless'          , '≮' ],
@@ -210,7 +208,6 @@ The default value of g:texabbrev_table is
         \ ['notin'          , '∉' ],
         \ ['nparallel'      , '∦' ],
         \ ['nrightarrow'    , '↛' ],
-        \ ['nRightarrow'    , '⇏' ],
         \ ['nsim'           , '≁' ],
         \ ['nvdash'         , '⊬' ],
         \ ['nvDash'         , '⊭' ],
@@ -231,7 +228,6 @@ The default value of g:texabbrev_table is
         \ ['rceil'          , '⌉' ],
         \ ['rfloor'         , '⌋' ],
         \ ['rightarrow'     , '→' ],
-        \ ['Rightarrow'     , '⇒' ],
         \ ['rightarrowtail' , '↣' ],
         \ ['S'              , '§' ], 
         \ ['searrow'        , '↘' ],
@@ -415,7 +411,6 @@ as an option in my personal .sty file):
     \newunicodechar{↽}{\leftharpoondown}
     \newunicodechar{↼}{\leftharpoonup}
     \newunicodechar{↔}{\leftrightarrow}
-    \newunicodechar{⇔}{\Leftrightarrow}
     \newunicodechar{≦}{\leqq}
     \newunicodechar{≲}{\lesssim}
     \newunicodechar{⌊}{\lfloor}
@@ -438,7 +433,6 @@ as an option in my personal .sty file):
     \newunicodechar{∋}{\ni}
     \newunicodechar{↚}{\nleftarrow}
     \newunicodechar{⇍}{\nLeftarrow}
-    \newunicodechar{⇎}{\nLeftrightarrow}
     \newunicodechar{≰}{\nleq}
     \newunicodechar{≰}{\nleqq}
     \newunicodechar{≮}{\nless}
@@ -446,7 +440,6 @@ as an option in my personal .sty file):
     \newunicodechar{∉}{\notin}
     \newunicodechar{∦}{\nparallel}
     \newunicodechar{↛}{\nrightarrow}
-    \newunicodechar{⇏}{\nRightarrow}
     \newunicodechar{≁}{\nsim}
     \newunicodechar{⊬}{\nvdash}
     \newunicodechar{⊭}{\nvDash}
@@ -467,7 +460,6 @@ as an option in my personal .sty file):
     \newunicodechar{⌉}{\rceil}
     \newunicodechar{⌋}{\rfloor}
     \newunicodechar{→}{\rightarrow}
-    \newunicodechar{⇒}{\Rightarrow}
     \newunicodechar{↣}{\rightarrowtail}
     \newunicodechar{§}{\S}
     \newunicodechar{↘}{\searrow}
