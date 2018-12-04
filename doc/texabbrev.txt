@@ -117,18 +117,14 @@ The default value of `g:texabbrev_table` is
         \ ['leq'            , '≤' ],
         \ ['ge'             , '≥' ],
         \ ['geq'            , '≥' ],
-        \ ['ne'             , '≠' ],
-        \ ['neq'            , '≠' ],
         \ ['by'             , '×' ],
         \ ['times'          , '×' ],
         \ ['in'             , '∈' ],
-        \ ['pm'             , '±' ],
         \ ['mp'             , '∓' ],
         \ ['infty'          , '∞' ],
         \ ['int'            , '∫' ],
         \ ['iint'           , '∬' ],
         \ ['iiint'          , '∭' ],
-        \ ['oint'           , '∮' ],
         \ ['angle'          , '∠' ],
         \ ['approx'         , '≈' ],
         \ ['ast'            , '∗' ],
@@ -137,11 +133,8 @@ The default value of `g:texabbrev_table` is
         \ ['between'        , '≬' ],
         \ ['bigcap'         , '∩' ],
         \ ['bigcup'         , '∪' ],
-        \ ['bigtriangledown', '∇' ],
-        \ ['bigtriangleup'  , '∆' ],
         \ ['bigvee'         , '⋁' ],
         \ ['bigwedge'       , '⋀' ],
-        \ ['bot'            , '⊥' ],
         \ ['bullet'         , '•' ], 
         \ ['cdot'           , '·' ],
         \ ['circ'           , '○' ],
@@ -186,8 +179,6 @@ The default value of `g:texabbrev_table` is
         \ ['lneqq'          , '≨' ],
         \ ['lor'            , '∨' ],
         \ ['mid'            , '∣' ],
-        \ ['mp'             , '∓' ],
-        \ ['nabla'          , '∇' ],
         \ ['natural'        , '♮' ],
         \ ['ncong'          , '≇' ],
         \ ['ne'             , '≠' ],
@@ -219,7 +210,6 @@ The default value of `g:texabbrev_table` is
         \ ['oslash'         , '⊘' ],
         \ ['otimes'         , '⊗' ],
         \ ['owns'           , '∋' ],
-        \ ['partial'        , '∂' ],
         \ ['perp'           , '⊥' ],
         \ ['pm'             , '±' ],
         \ ['prime'          , '′' ],
@@ -246,7 +236,6 @@ The default value of `g:texabbrev_table` is
         \ ['surd'           , '√' ],
         \ ['swarrow'        , '↙' ],
         \ ['therefore'      , '∴' ],
-        \ ['times'          , '×' ],
         \ ['to'             , '→' ],
         \ ['top'            , '⊤' ],
         \ ['triangle'       , '∆' ],
@@ -257,7 +246,6 @@ The default value of `g:texabbrev_table` is
         \ ['varnothing'     , '∅' ],
         \ ['emptyset'       , '∅' ],
         \ ['nothing'        , '∅' ],
-        \ ['vartriangle'    , '∆' ],
         \ ['vdash'          , '⊢' ],
         \ ['vDash'          , '⊨' ], 
         \ ['langle'         , '⟨' ],
@@ -364,12 +352,9 @@ as an option in my personal .sty file):
     \newunicodechar{∩}{\bigcap}
     \newunicodechar{○}{\bigcirc}
     \newunicodechar{∪}{\bigcup}
-    \newunicodechar{∇}{\bigtriangledown}
-    \newunicodechar{∆}{\bigtriangleup}
     \newunicodechar{⋁}{\bigvee}
     \newunicodechar{⋀}{\bigwedge}
     \newunicodechar{∎}{\blacksquare}
-    \newunicodechar{⊥}{\bot}
     \newunicodechar{•}{\bullet}
     \newunicodechar{∩}{\cap}
     \newunicodechar{·}{\cdot}
@@ -418,14 +403,10 @@ as an option in my personal .sty file):
     \newunicodechar{≨}{\lneqq}
     \newunicodechar{∨}{\lor}
     \newunicodechar{∣}{\mid}
-    \newunicodechar{∓}{\mp}
-    \newunicodechar{∇}{\nabla}
     \newunicodechar{♮}{\natural}
     \newunicodechar{≇}{\ncong}
-    \newunicodechar{≠}{\ne}
     \newunicodechar{↗}{\nearrow}
     \newunicodechar{¬}{\neg}
-    \newunicodechar{≠}{\neq}
     \newunicodechar{∄}{\nexists}
     \newunicodechar{≱}{\ngeq}
     \newunicodechar{≱}{\ngeqq}
@@ -451,9 +432,7 @@ as an option in my personal .sty file):
     \newunicodechar{⊘}{\oslash}
     \newunicodechar{⊗}{\otimes}
     \newunicodechar{∋}{\owns}
-    \newunicodechar{∂}{\partial}
     \newunicodechar{⊥}{\perp}
-    \newunicodechar{±}{\pm}
     \newunicodechar{′}{\prime}
     \newunicodechar{∏}{\prod}
     \newunicodechar{∝}{\propto}
@@ -478,7 +457,6 @@ as an option in my personal .sty file):
     \newunicodechar{√}{\surd}
     \newunicodechar{↙}{\swarrow}
     \newunicodechar{∴}{\therefore}
-    \newunicodechar{×}{\times}
     \newunicodechar{→}{\to}
     \newunicodechar{⊤}{\top}
     \newunicodechar{∆}{\triangle}
@@ -489,7 +467,6 @@ as an option in my personal .sty file):
     \newunicodechar{⇕}{\Updownarrow}
     \newunicodechar{⌝}{\urcorner}
     \newunicodechar{∅}{\varnothing}
-    \newunicodechar{∆}{\vartriangle}
     \newunicodechar{⊢}{\vdash}
     \newunicodechar{⊨}{\vDash}
     \newunicodechar{∨}{\vee}
