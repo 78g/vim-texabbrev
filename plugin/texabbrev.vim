@@ -271,6 +271,7 @@ func s:Unicode2Tex()
   for pair in s:texabbrev_table
     execute '%s/\C'.pair[1].'\(\a\)/\\'.pair[0].' \1/ge'
     execute '%s/\C'.pair[1].'\(\A\)/\\'.pair[0].'\1/ge'
+    execute '%s/\C'.pair[1].'$/\\'.pair[0].'/ge'
   endfor
   call s:TexUnabbrev()
 endfun
