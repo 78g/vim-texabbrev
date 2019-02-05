@@ -341,7 +341,6 @@ as an option in my personal .sty file):
     \newunicodechar{∫}{\int}
     \newunicodechar{∬}{\iint}
     \newunicodechar{∭}{\iiint}
-    \newunicodechar{∮}{\oint}
     \newunicodechar{∠}{\angle}
     \newunicodechar{≈}{\approx}
     \newunicodechar{∗}{\ast}
