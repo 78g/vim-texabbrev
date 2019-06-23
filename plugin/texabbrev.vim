@@ -104,7 +104,7 @@ else
         \ ['bigwedge'       , '⋀' ],
         \ ['bullet'         , '•' ], 
         \ ['cdot'           , '·' ],
-        \ ['circ'           , '○' ],
+        \ ['circ'           , '∘' ],
         \ ['cong'           , '≅' ],
         \ ['coprod'         , '∐' ], 
         \ ['dagger'         , '†' ],
