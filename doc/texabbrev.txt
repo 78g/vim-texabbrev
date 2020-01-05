@@ -80,7 +80,8 @@ The default value of `g:texabbrev_table` is
         \ ['varsigma'       , 'ς' ],
         \ ['tau'            , 'τ' ],
         \ ['upsilon'        , 'υ' ],
-        \ ['phi'            , 'φ' ],
+        \ ['phi'            , 'ϕ' ],
+        \ ['varphi'         , 'φ' ],
         \ ['chi'            , 'χ' ],
         \ ['psi'            , 'ψ' ],
         \ ['omega'          , 'ω' ],
@@ -293,7 +294,8 @@ as an option in my personal .sty file):
     \newunicodechar{ς}{\varsigma}
     \newunicodechar{τ}{\tau}
     \newunicodechar{υ}{\upsilon}
-    \newunicodechar{φ}{\phi}
+    \newunicodechar{φ}{\varphi}
+    \newunicodechar{ϕ}{\phi}
     \newunicodechar{χ}{\chi}
     \newunicodechar{ψ}{\psi}
     \newunicodechar{ω}{\omega}
