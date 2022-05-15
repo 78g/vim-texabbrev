@@ -18,10 +18,8 @@ else
 end
 
 " Much of this list is taken from Dr. Chip's TeX syntax file
-if exists("g:texabbrev_table")
-  let s:texabbrev_table = g:texabbrev_table
-else
-  let s:texabbrev_table = [
+if !exists("g:texabbrev_table")
+  let g:texabbrev_table = [
         \ ['alpha'          , 'α' ],
         \ ['beta'           , 'β' ],
         \ ['gamma'          , 'γ' ],
@@ -231,7 +229,7 @@ function s:Backslash(default, repl)
 endfunction
 
 func s:TexAbbrev()
-  for pair in s:texabbrev_table
+  for pair in g:texabbrev_table
     silent execute "abbrev <buffer> ".pair[0]." <c-r>=<sid>Backslash('".pair[0]."','".pair[1]."')<CR>"
     if !exists("g:texabbrev_nocabbrev")
       silent execute "cabbrev <buffer> tex".pair[0]." ".pair[1]
@@ -246,7 +244,7 @@ func s:TexAbbrev()
 endfun
 
 func s:TexUnabbrev()
-  for pair in s:texabbrev_table
+  for pair in g:texabbrev_table
     " need silent! since s:TexAbbrev may not have been called
     silent! execute "unabbrev <buffer> ".pair[0]
     if exists("g:texabbrev_tmap")
@@ -262,14 +260,14 @@ func s:TexUnabbrev()
 endfun
 
 func s:Tex2Unicode()
-  for pair in s:texabbrev_table
+  for pair in g:texabbrev_table
     execute '%s/\C\\'.pair[0].'\>/'.pair[1].'/ge'
   endfor
   call s:TexAbbrev()
 endfun
 
 func s:Unicode2Tex()
-  for pair in s:texabbrev_table
+  for pair in g:texabbrev_table
     execute '%s/\C'.pair[1].'\(\a\)/\\'.pair[0].' \1/ge'
     execute '%s/\C'.pair[1].'\(\A\)/\\'.pair[0].'\1/ge'
     execute '%s/\C'.pair[1].'$/\\'.pair[0].'/ge'
