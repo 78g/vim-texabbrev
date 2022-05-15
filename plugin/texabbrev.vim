@@ -1,5 +1,5 @@
 " Vim plugin for translating/abbreviating tex commands to unicode equivalents
-" Last Change: 2018 Nov 18
+" Last Change: 2022 May 15
 " Maintainer: Miles Wheeler
 
 if exists("g:loaded_texabbrev")
@@ -75,15 +75,12 @@ if !exists("g:texabbrev_table")
         \ ['Psi'            , 'Ψ' ],
         \ ['Omega'          , 'Ω' ],
         \ ['nabla'          , '∇' ],
-        \ ['grad'           , '∇' ],
         \ ['partial'        , '∂' ],
-        \ ['dell'           , '∂' ],
         \ ['ell'            , 'ℓ' ],
         \ ['le'             , '≤' ],
         \ ['leq'            , '≤' ],
         \ ['ge'             , '≥' ],
         \ ['geq'            , '≥' ],
-        \ ['by'             , '×' ],
         \ ['times'          , '×' ],
         \ ['in'             , '∈' ],
         \ ['mp'             , '∓' ],
@@ -192,7 +189,6 @@ if !exists("g:texabbrev_table")
         \ ['spadesuit'      , '♠' ],
         \ ['star'           , '⋆' ],
         \ ['subset'         , '⊂' ],
-        \ ['sub'            , '⊂' ],
         \ ['subseteq'       , '⊆' ],
         \ ['subsetneq'      , '⊊' ],
         \ ['sum'            , '∑' ],
@@ -211,7 +207,6 @@ if !exists("g:texabbrev_table")
         \ ['Updownarrow'    , '⇕' ],
         \ ['varnothing'     , '∅' ],
         \ ['emptyset'       , '∅' ],
-        \ ['nothing'        , '∅' ],
         \ ['vdash'          , '⊢' ],
         \ ['vDash'          , '⊨' ], 
         \ ['langle'         , '⟨' ],
