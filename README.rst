@@ -49,14 +49,14 @@ If ``g:texabbrev_nocomplete`` exists then ``'complete'`` will not be altered. If
 ``g:texabbrev_nocabbrev`` exists then no command-line abbreviations will be set.
 If ``g:texabbrev_tmap`` exists then mappings for ``:terminal`` will be created.
 
-The default tex commands and unicode equivalents can be overriden by defining
+The default tex commands and unicode equivalents can be overridden by defining
 _`g:texabbrev_table`  (see below for the default value) 
 
 .. code-block:: vim
 
    let g:texabbrev_table = [['alpha','α'],['beta','β']]
 
-Similarly the wordlist file to be added to ``'complete'`` can be overriden by
+Similarly the wordlist file to be added to ``'complete'`` can be overridden by
 defining ``g:texabbrev_wordlist``
 
 .. code-block:: vim
@@ -72,7 +72,7 @@ The default value of g:texabbrev_table_ is
 
 .. code-block:: vim
 
-    let g:texabbrev_table = [  
+   let g:texabbrev_table = [
         \ ['alpha'          , 'α' ],
         \ ['beta'           , 'β' ],
         \ ['gamma'          , 'γ' ],
@@ -98,7 +98,8 @@ The default value of g:texabbrev_table_ is
         \ ['varsigma'       , 'ς' ],
         \ ['tau'            , 'τ' ],
         \ ['upsilon'        , 'υ' ],
-        \ ['phi'            , 'φ' ],
+        \ ['phi'            , 'ϕ' ],
+        \ ['varphi'         , 'φ' ],
         \ ['chi'            , 'χ' ],
         \ ['psi'            , 'ψ' ],
         \ ['omega'          , 'ω' ],
@@ -127,26 +128,19 @@ The default value of g:texabbrev_table_ is
         \ ['Psi'            , 'Ψ' ],
         \ ['Omega'          , 'Ω' ],
         \ ['nabla'          , '∇' ],
-        \ ['grad'           , '∇' ],
         \ ['partial'        , '∂' ],
-        \ ['dell'           , '∂' ],
         \ ['ell'            , 'ℓ' ],
         \ ['le'             , '≤' ],
         \ ['leq'            , '≤' ],
         \ ['ge'             , '≥' ],
         \ ['geq'            , '≥' ],
-        \ ['ne'             , '≠' ],
-        \ ['neq'            , '≠' ],
-        \ ['by'             , '×' ],
         \ ['times'          , '×' ],
         \ ['in'             , '∈' ],
-        \ ['pm'             , '±' ],
         \ ['mp'             , '∓' ],
         \ ['infty'          , '∞' ],
         \ ['int'            , '∫' ],
         \ ['iint'           , '∬' ],
         \ ['iiint'          , '∭' ],
-        \ ['oint'           , '∮' ],
         \ ['angle'          , '∠' ],
         \ ['approx'         , '≈' ],
         \ ['ast'            , '∗' ],
@@ -155,14 +149,11 @@ The default value of g:texabbrev_table_ is
         \ ['between'        , '≬' ],
         \ ['bigcap'         , '∩' ],
         \ ['bigcup'         , '∪' ],
-        \ ['bigtriangledown', '∇' ],
-        \ ['bigtriangleup'  , '∆' ],
         \ ['bigvee'         , '⋁' ],
         \ ['bigwedge'       , '⋀' ],
-        \ ['bot'            , '⊥' ],
         \ ['bullet'         , '•' ], 
         \ ['cdot'           , '·' ],
-        \ ['circ'           , '○' ],
+        \ ['circ'           , '∘' ],
         \ ['cong'           , '≅' ],
         \ ['coprod'         , '∐' ], 
         \ ['dagger'         , '†' ],
@@ -197,7 +188,6 @@ The default value of g:texabbrev_table_ is
         \ ['leftharpoondown', '↽' ],
         \ ['leftharpoonup'  , '↼' ],
         \ ['leftrightarrow' , '↔' ],
-        \ ['Leftrightarrow' , '⇔' ],
         \ ['leqq'           , '≦' ],
         \ ['lesssim'        , '≲' ],
         \ ['lfloor'         , '⌊' ],
@@ -205,8 +195,6 @@ The default value of g:texabbrev_table_ is
         \ ['lneqq'          , '≨' ],
         \ ['lor'            , '∨' ],
         \ ['mid'            , '∣' ],
-        \ ['mp'             , '∓' ],
-        \ ['nabla'          , '∇' ],
         \ ['natural'        , '♮' ],
         \ ['ncong'          , '≇' ],
         \ ['ne'             , '≠' ],
@@ -220,7 +208,6 @@ The default value of g:texabbrev_table_ is
         \ ['ni'             , '∋' ],
         \ ['nleftarrow'     , '↚' ],
         \ ['nLeftarrow'     , '⇍' ],
-        \ ['nLeftrightarrow', '⇎' ],
         \ ['nleq'           , '≰' ],
         \ ['nleqq'          , '≰' ],
         \ ['nless'          , '≮' ],
@@ -228,7 +215,6 @@ The default value of g:texabbrev_table_ is
         \ ['notin'          , '∉' ],
         \ ['nparallel'      , '∦' ],
         \ ['nrightarrow'    , '↛' ],
-        \ ['nRightarrow'    , '⇏' ],
         \ ['nsim'           , '≁' ],
         \ ['nvdash'         , '⊬' ],
         \ ['nvDash'         , '⊭' ],
@@ -240,7 +226,6 @@ The default value of g:texabbrev_table_ is
         \ ['oslash'         , '⊘' ],
         \ ['otimes'         , '⊗' ],
         \ ['owns'           , '∋' ],
-        \ ['partial'        , '∂' ],
         \ ['perp'           , '⊥' ],
         \ ['pm'             , '±' ],
         \ ['prime'          , '′' ],
@@ -249,7 +234,6 @@ The default value of g:texabbrev_table_ is
         \ ['rceil'          , '⌉' ],
         \ ['rfloor'         , '⌋' ],
         \ ['rightarrow'     , '→' ],
-        \ ['Rightarrow'     , '⇒' ],
         \ ['rightarrowtail' , '↣' ],
         \ ['S'              , '§' ], 
         \ ['searrow'        , '↘' ],
@@ -258,7 +242,6 @@ The default value of g:texabbrev_table_ is
         \ ['spadesuit'      , '♠' ],
         \ ['star'           , '⋆' ],
         \ ['subset'         , '⊂' ],
-        \ ['sub'            , '⊂' ],
         \ ['subseteq'       , '⊆' ],
         \ ['subsetneq'      , '⊊' ],
         \ ['sum'            , '∑' ],
@@ -268,7 +251,6 @@ The default value of g:texabbrev_table_ is
         \ ['surd'           , '√' ],
         \ ['swarrow'        , '↙' ],
         \ ['therefore'      , '∴' ],
-        \ ['times'          , '×' ],
         \ ['to'             , '→' ],
         \ ['top'            , '⊤' ],
         \ ['triangle'       , '∆' ],
@@ -278,8 +260,6 @@ The default value of g:texabbrev_table_ is
         \ ['Updownarrow'    , '⇕' ],
         \ ['varnothing'     , '∅' ],
         \ ['emptyset'       , '∅' ],
-        \ ['nothing'        , '∅' ],
-        \ ['vartriangle'    , '∆' ],
         \ ['vdash'          , '⊢' ],
         \ ['vDash'          , '⊨' ], 
         \ ['langle'         , '⟨' ],

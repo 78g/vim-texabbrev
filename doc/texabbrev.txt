@@ -1,4 +1,4 @@
-*texabbrev.txt*	For Vim version 7.0?	Last change: 2018 November 1
+*texabbrev.txt*	For Vim version 7.0?	Last change: 2021 May 9
 ==============================================================================
 Use tex commands like `\alpha` or `\subseteq` as insert mode abbreviations for
 unicode counterparts `α` and `⊆`. By default, adds `alpha` to 'complete', and
@@ -38,11 +38,11 @@ set. If *g:texabbrev_tmap* exists then mappings for |:terminal| will be
 created.
 
 The default tex commands and unicode equivalents (see |texabbrev-table|
-below) can be overriden by defining *g:texabbrev_table*  
+below) can be overridden by defining *g:texabbrev_table*  
 >
     let g:texabbrev_table = [['alpha','α'],['beta','β']]
 <
-Similarly the wordlist file to be added to 'complete' can be overriden by
+Similarly the wordlist file to be added to 'complete' can be overridden by
 defining *g:texabbrev_wordlist*  
 >
     let g:texabbrev_wordlist = "path/to/wordlist"
@@ -54,7 +54,7 @@ DEFAULT SYMBOL TABLE                                           *texabbrev-table*
 
 The default value of `g:texabbrev_table` is 
 >
-    let g:texabbrev_table = [  
+   let g:texabbrev_table = [
         \ ['alpha'          , 'α' ],
         \ ['beta'           , 'β' ],
         \ ['gamma'          , 'γ' ],
@@ -110,15 +110,12 @@ The default value of `g:texabbrev_table` is
         \ ['Psi'            , 'Ψ' ],
         \ ['Omega'          , 'Ω' ],
         \ ['nabla'          , '∇' ],
-        \ ['grad'           , '∇' ],
         \ ['partial'        , '∂' ],
-        \ ['dell'           , '∂' ],
         \ ['ell'            , 'ℓ' ],
         \ ['le'             , '≤' ],
         \ ['leq'            , '≤' ],
         \ ['ge'             , '≥' ],
         \ ['geq'            , '≥' ],
-        \ ['by'             , '×' ],
         \ ['times'          , '×' ],
         \ ['in'             , '∈' ],
         \ ['mp'             , '∓' ],
@@ -138,7 +135,7 @@ The default value of `g:texabbrev_table` is
         \ ['bigwedge'       , '⋀' ],
         \ ['bullet'         , '•' ], 
         \ ['cdot'           , '·' ],
-        \ ['circ'           , '○' ],
+        \ ['circ'           , '∘' ],
         \ ['cong'           , '≅' ],
         \ ['coprod'         , '∐' ], 
         \ ['dagger'         , '†' ],
@@ -227,7 +224,6 @@ The default value of `g:texabbrev_table` is
         \ ['spadesuit'      , '♠' ],
         \ ['star'           , '⋆' ],
         \ ['subset'         , '⊂' ],
-        \ ['sub'            , '⊂' ],
         \ ['subseteq'       , '⊆' ],
         \ ['subsetneq'      , '⊊' ],
         \ ['sum'            , '∑' ],
@@ -246,7 +242,6 @@ The default value of `g:texabbrev_table` is
         \ ['Updownarrow'    , '⇕' ],
         \ ['varnothing'     , '∅' ],
         \ ['emptyset'       , '∅' ],
-        \ ['nothing'        , '∅' ],
         \ ['vdash'          , '⊢' ],
         \ ['vDash'          , '⊨' ], 
         \ ['langle'         , '⟨' ],
