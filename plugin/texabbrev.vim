@@ -225,7 +225,11 @@ endfunction
 
 func s:TexAbbrev()
   for pair in g:texabbrev_table
-    silent execute "abbrev <buffer> ".pair[0]." <c-r>=<sid>Backslash('".pair[0]."','".pair[1]."')<CR>"
+    if len(pair[0])==1
+      silent execute "abbrev <buffer> \\".pair[0]." ".pair[1]
+    else
+      silent execute "abbrev <buffer> ".pair[0]." <c-r>=<sid>Backslash('".pair[0]."','".pair[1]."')<CR>"
+    end
     if !exists("g:texabbrev_nocabbrev")
       silent execute "cabbrev <buffer> tex".pair[0]." ".pair[1]
     end
@@ -241,7 +245,11 @@ endfun
 func s:TexUnabbrev()
   for pair in g:texabbrev_table
     " need silent! since s:TexAbbrev may not have been called
-    silent! execute "unabbrev <buffer> ".pair[0]
+    if len(pair[0])==1
+      silent! execute "unabbrev <buffer> \\".pair[0]
+    else
+      silent! execute "unabbrev <buffer> ".pair[0]
+    end
     if exists("g:texabbrev_tmap")
       silent! execute "tunmap \\".pair[0]." ".pair[1]
     end
