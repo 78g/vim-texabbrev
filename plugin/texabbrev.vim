@@ -1,5 +1,5 @@
 " Vim plugin for translating/abbreviating tex commands to unicode equivalents
-" Last Change: 2022 May 15
+" Last Change: 2023 May 22
 " Maintainer: Miles Wheeler
 
 if exists("g:loaded_texabbrev")
@@ -227,6 +227,9 @@ func s:TexAbbrev()
   for pair in g:texabbrev_table
     if len(pair[0])==1
       silent execute "abbrev <buffer> \\".pair[0]." ".pair[1]
+      if g:texabbrev_tags
+        silent execute "abbrev <buffer> >\\".pair[0]." >".pair[1]
+      end
     else
       silent execute "abbrev <buffer> ".pair[0]." <c-r>=<sid>Backslash('".pair[0]."','".pair[1]."')<CR>"
     end
@@ -247,6 +250,9 @@ func s:TexUnabbrev()
     " need silent! since s:TexAbbrev may not have been called
     if len(pair[0])==1
       silent! execute "unabbrev <buffer> \\".pair[0]
+      if g:texabbrev_tags
+        silent! execute "unabbrev <buffer> >\\".pair[0]
+      end
     else
       silent! execute "unabbrev <buffer> ".pair[0]
     end

@@ -1,4 +1,4 @@
-*texabbrev.txt*	For Vim version 7.0?	Last change: 2021 May 9
+*texabbrev.txt*	For Vim version 7.0?	Last change: 2023 May 22
 ==============================================================================
 Use tex commands like `\alpha` or `\subseteq` as insert mode abbreviations for
 unicode counterparts `α` and `⊆`. By default, adds `alpha` to 'complete', and
@@ -49,6 +49,11 @@ defining *g:texabbrev_wordlist*
 < 
 If anyone has a simple idea for how this process can be automated, I'm all
 ears.
+
+Finally, if *g:texabbrev_tags* is defined, then some additional mappings are
+made so that signle-character tex commands also complete if they occur
+immediately after a `>`, which it turns out I want when writing PreTeXt
+source. Again, not an ideal solution.
 ==============================================================================
 DEFAULT SYMBOL TABLE                                           *texabbrev-table*
 
