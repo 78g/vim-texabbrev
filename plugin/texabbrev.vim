@@ -227,7 +227,7 @@ func s:TexAbbrev()
   for pair in g:texabbrev_table
     if len(pair[0])==1
       silent execute "abbrev <buffer> \\".pair[0]." ".pair[1]
-      if g:texabbrev_tags
+      if exists("g:texabbrev_tags")
         silent execute "abbrev <buffer> >\\".pair[0]." >".pair[1]
       end
     else
@@ -250,7 +250,7 @@ func s:TexUnabbrev()
     " need silent! since s:TexAbbrev may not have been called
     if len(pair[0])==1
       silent! execute "unabbrev <buffer> \\".pair[0]
-      if g:texabbrev_tags
+      if exists("g:texabbrev_tags")
         silent! execute "unabbrev <buffer> >\\".pair[0]
       end
     else
